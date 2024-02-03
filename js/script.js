@@ -1,3 +1,18 @@
+var bankAccount = {
+    AccountNumber: 774239,
+    AccountName: 'Tyler Sykes',
+    Balance: '£10499',
+    NumberOfTransactions: 53,
+    Contacts: [
+        'Bob',
+        'Geoff',
+        'James',
+        'John',
+        'Fred',
+        'Billy'
+    ],
+}
+
 var car = {
     make: 'VW',
     type: 'Polo',
