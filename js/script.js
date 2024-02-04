@@ -1,16 +1,18 @@
-var bankAccount = {
-    AccountNumber: 774239,
-    AccountName: 'Tyler Sykes',
-    Balance: '£10499',
-    NumberOfTransactions: 53,
-    Contacts: [
-        'Bob',
-        'Geoff',
-        'James',
-        'John',
-        'Fred',
-        'Billy'
-    ],
+//This Is Comment In JS
+
+/*
+This Is Multiple Lines
+*/
+
+//This Function Changed The Color By Changing The Class Name
+var doCoolStuff = function() {
+    var currentClassName = document.getElementById('cool').className;
+
+    if (currentClassName == 'cool') {
+        document.getElementById('cool').className = 'cool red';
+    } else {
+        document.getElementById('cool').className = 'cool';
+    }
 }
 
 var car = {
