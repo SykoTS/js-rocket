@@ -7,6 +7,78 @@
     left: 0;
 }
 
+.interface{
+    text-align: center;
+    padding: 20px;
+}
+
+a.button{   
+    display: inline-block;
+    animation:gradient 10s ease infinite,8s rotate linear infinite,blinkxd 3s ease-in-out infinite;
+    border-radius: 4px;
+    transition: 0.2s;
+    overflow: visible !important;
+    background: linear-gradient(-45deg, #682e3ac2, #913144c9,#72192bc0,#a01732c4,#ff0033c4);
+    background-size: 400% 400%;
+    border-radius: .3vh;
+    transition: all 0.2s ease;
+    color: black;
+    padding: 20px 40px;
+    text-transform: uppercase;
+    text-decoration: none;
+    font-family: 'Poppins', sans-serif;
+}
+
+a.button:hover {
+    animation:0.4s rotate linear infinite,gradient 15s ease infinite;
+    border-radius: .6vh;
+    border:3px solid black;
+    transition: 0.2s;
+    box-shadow: 0 0 10px #ff0033 !important;
+    overflow: visible !important;
+    background: linear-gradient(-45deg, #682e3ac2, #913144c9,#72192bc0,#a01732c4,#ff0033c4);
+    background-size: 400% 400%;
+    border-image: linear-gradient(0deg, #ff0033,#25b6c300,#ff0033,#25b6c300) 1;
+    font-size:5vh;
+    transform:scale(1.05);
+    cursor: pointer;
+}
+
+@keyframes blinkxd {
+    0% {
+        filter: brightness(0.75)
+    }
+    50% {
+        filter: brightness(1.75)
+    }
+    100% {
+        filter: brightness(0.75)
+    }
+}
+
+@keyframes rotate {
+    to {
+      --angle: 360deg;
+    }
+  }
+  @property --angle {
+      syntax: '<angle>';
+      initial-value: 0deg;
+      inherits: false;
+  }
+  
+@keyframes gradient {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
 .right{
     background-color: lemonchiffon;
     position: fixed;
@@ -16,20 +88,49 @@
     right: 0;
 }
 
+.nervous{
+    position: absolute;
+    bottom: 200px;
+    right: 70px;
+    background: url('../images/nervous.png') no-repeat 0 0;
+    width: 223px;
+    height: 100px;
+    display: none;
+}
+
+.cant-wait{
+    position: absolute;
+    bottom: 200px;
+    left: 90px;
+    background: url('../images/cant-wait.png') no-repeat 0 0;
+    width: 206px;
+    height: 65px;
+    display: none;
+}
+
+.cant-wait.show{
+    display: block;
+}
+
+.nervous.show{
+    display: block;
+}
+
 .rocket{
     position: absolute;
     left: 50%;
-    bottom: 20px;
-    width: 20px;
-    height: 100px;
-    background-color: blue;
+    bottom: -13px;
+    width: 143px;
+    height: 272px;
+    margin-left: -71.5px;;
+    background: url('../images/rocket-state1.png') no-repeat 0 0;
     transition: bottom 10000ms;
 }
 
 .ground{
-    background-color: green;
+    background: url('../images/ground.png') no-repeat center 0;
     position: absolute;
-    bottom: 0;
+    bottom: 10px;
     left: 0;
     width: 100%;
     height: 20px;
@@ -37,6 +138,23 @@
 body.body-stage1 .rocket{
     transition: none;
 }
+
+body.body-stage2 .rocket{
+    background-image: url('../images/rocket-state2.gif');
+}
+
+body.body-stage3 .rocket,
+body.body-stage4 .rocket{
+    background-image: url('../images/rocket-state3.gif');
+}
+
+body.body-stage5 .rocket{
+    background-image: url('../images/boom.png');
+    width: 209px;
+    height: 200px;
+    margin-left: -104.5px;
+}
+
 
 body.body-stage3 .rocket,
 body.body-stage4 .rocket{
